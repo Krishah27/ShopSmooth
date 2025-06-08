@@ -1,6 +1,10 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from compare import compare_all
+import os
+print("Working dir:", os.getcwd())
+print("Contents:", os.listdir())
+
 
 app = Flask(__name__)
 CORS(app)
