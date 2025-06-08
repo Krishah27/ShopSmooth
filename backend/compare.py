@@ -1,7 +1,7 @@
-from scrapers.amazon import search_amazon
-from scrapers.flipkart import search_flipkart
-from scrapers.myntra import search_myntra
-from scrapers.meesho import search_meesho
+from .scrapers.amazon import search_amazon
+from .scrapers.flipkart import search_flipkart
+from .scrapers.myntra import search_myntra
+from .scrapers.meesho import search_meesho
 
 def compare_all(query):
     results = [
