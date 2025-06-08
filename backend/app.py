@@ -1,0 +1,16 @@
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+from compare import compare_all
+
+app = Flask(__name__)
+CORS(app)
+
+@app.route("/compare", methods=["POST"])
+def compare():
+    data = request.get_json()
+    product_name = data.get("product_name")
+    result = compare_all(product_name)
+    return jsonify(result)
+
+if __name__ == "__main__":
+    app.run()
